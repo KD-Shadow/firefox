@@ -1,0 +1,124 @@
+/*==============================================================================================*
+
+  +-----+-----+-----+-----+-----+-----+-----+
+  | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
+  | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
+  +-----+-----+-----+-----+-----+-----+-----+
+
+  Description:    Cascade is a minimalstic and keyboard centered custom theme removing a lot of the
+                  subjective clutter default Firefox comes with. This theme is highly inspired by the
+                  stylistic choices of SimpleFox by Miguel Ávila. 🦊
+                  https://github.com/migueravila/SimpleFox
+
+  Author:         Andreas Grafen
+                  (https://andreas.grafen.info)
+
+  Repository:     https://github.com/andreasgrafen/cascade
+                  Thank you Nick, Abdallah, Benyamin and Wael for all the great suggestions for improvements! ♡
+
+                  Nick:     https://github.com/nicksundermeyer
+                  Abdallah: https://github.com/HeiWiper
+                  Benyamin: https://github.com/benyaminl
+                  Wael:     https://github.com/wael444
+
+                  If you're looking for a **mouse-friendly** clone please check out Waterfall.
+                  https://github.com/crambaud/waterfall
+
+*==============================================================================================*/
+
+@import "includes/cascade-config.css";
+@import "includes/cascade-colours.css";
+
+@import "includes/cascade-layout.css";
+@import "includes/cascade-responsive.css";
+@import "includes/cascade-floating-panel.css";
+
+@import "includes/cascade-nav-bar.css";
+@import "includes/cascade-tabs.css";
+
+/* Make context menu smaller */
+#contentAreaContextMenu,
+menupopup {
+    font-size: 10px !important;  /* Decrease font size */
+    padding: 1px !important;
+}
+
+#contentAreaContextMenu > menu,
+#contentAreaContextMenu > menuitem,
+menupopup > menu,
+menupopup > menuitem {
+    padding: 2px 6px !important; /* Reduce padding */
+    min-height: 16px !important; /* Reduce item height */
+}
+
+/* Decrease width */
+#contentAreaContextMenu {
+    min-width: 120px !important;
+    max-width: 180px !important;
+}
+/* Reduce extension popup size */
+.panel-subview-body {
+    max-height: 400px !important; /* Adjust this value as needed */
+    width: 300px !important;      /* Adjust this value as needed */
+}
+
+/* Make popup scrollable if content is too long */
+.panel-subview-body {
+    overflow-y: auto !important;
+}
+
+/* Reduce padding/margins to save space */
+.panel-subview-body {
+    padding: 4px !important;
+}
+
+/* Make extension icons smaller */
+.webextension-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* Reduce font size in popups */
+.panel-subview-body * {
+    font-size: 12px !important;
+}
+/* Dark mode for popups */
+.panel-subview-body {
+    background-color: #222 !important;
+    color: #eee !important;
+}
+
+/* General menu background */
+#unified-extensions-panel,
+#appMenu-popup {
+    background-color: #1e1e2e !important; /* Mocha Base */
+    color: #cdd6f4 !important; /* Text Color */
+    border: 1px solid #313244 !important; /* Border */
+}
+
+/* Menu items */
+#unified-extensions-panel .unified-extensions-item,
+#appMenu-popup .panel-subview-body {
+    background-color: #181825 !important; /* Slightly darker */
+    color: #cdd6f4 !important; /* Text */
+}
+
+/* Hover effect */
+#unified-extensions-panel .unified-extensions-item:hover,
+#appMenu-popup .subviewbutton:hover {
+    background-color: #45475a !important; /* Hover */
+    color: #ffffff !important;
+}
+
+/* Icons inside menus */
+.unified-extensions-item .unified-extensions-item-icon {
+    filter: brightness(0.8) !important; /* Slightly dimmed */
+}
+
+/* Active item highlight */
+#unified-extensions-panel .unified-extensions-item[selected],
+#appMenu-popup .subviewbutton[selected] {
+    background-color: #b4befe !important; /* Lavender accent */
+    color: #1e1e2e !important;
+}
+
